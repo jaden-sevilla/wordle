@@ -1,0 +1,114 @@
+﻿<Window x:Class="Wordle.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Wordle"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="835" Width="759"
+        Background="#23272a">
+    
+    <Window.Resources>
+        <Style TargetType="TextBox">
+            <Setter Property="CaretBrush" Value="Transparent"/>
+        </Style>
+        <Style TargetType="Button">
+            <Style.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Style.Resources>
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"> </RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel Name="FirstStack" Margin="10" Grid.Row="0">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="4, 50, 4, 4">
+                <TextBox Name="A1" Width="50" Height="50" Margin="4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="40" FontFamily="Franklin Gothic Medium" MaxLength="1"  CharacterCasing="Upper"  PreviewKeyDown="TextBox_PreviewKeyDown" />
+                <TextBox Name="A2" Width="50" Height="50" Margin="4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="40" FontFamily="Franklin Gothic Medium" MaxLength="1"  CharacterCasing="Upper"  PreviewKeyDown="TextBox_PreviewKeyDown" />
+                <TextBox Name="A3" Width="50" Height="50" Margin="4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="40" FontFamily="Franklin Gothic Medium" MaxLength="1"  CharacterCasing="Upper"  PreviewKeyDown="TextBox_PreviewKeyDown" />
+                <TextBox Name="A4" Width="50" Height="50" Margin="4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="40" FontFamily="Franklin Gothic Medium" MaxLength="1"  CharacterCasing="Upper"  PreviewKeyDown="TextBox_PreviewKeyDown" />
+                <TextBox Name="A5" Width="50" Height="50" Margin="4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="40" FontFamily="Franklin Gothic Medium" MaxLength="1"  CharacterCasing="Upper"  PreviewKeyDown="TextBox_PreviewKeyDown" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="4">
+                <TextBox Name="B1" Width="50" Height="50" Margin="4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="40" FontFamily="Franklin Gothic Medium" MaxLength="1"  CharacterCasing="Upper"  PreviewKeyDown="TextBox_PreviewKeyDown" />
+                <TextBox Name="B2" Width="50" Height="50" Margin="4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="40" FontFamily="Franklin Gothic Medium" MaxLength="1"  CharacterCasing="Upper"  PreviewKeyDown="TextBox_PreviewKeyDown" />
+                <TextBox Name="B3" Width="50" Height="50" Margin="4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="40" FontFamily="Franklin Gothic Medium" MaxLength="1"  CharacterCasing="Upper"  PreviewKeyDown="TextBox_PreviewKeyDown" />
+                <TextBox Name="B4" Width="50" Height="50" Margin="4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="40" FontFamily="Franklin Gothic Medium" MaxLength="1"  CharacterCasing="Upper"  PreviewKeyDown="TextBox_PreviewKeyDown" />
+                <TextBox Name="B5" Width="50" Height="50" Margin="4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="40" FontFamily="Franklin Gothic Medium" MaxLength="1"  CharacterCasing="Upper"  PreviewKeyDown="TextBox_PreviewKeyDown" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="4">
+                <TextBox Name="C1" Width="50" Height="50" Margin="4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="40" FontFamily="Franklin Gothic Medium" MaxLength="1"  CharacterCasing="Upper"  PreviewKeyDown="TextBox_PreviewKeyDown" />
+                <TextBox Name="C2" Width="50" Height="50" Margin="4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="40" FontFamily="Franklin Gothic Medium" MaxLength="1"  CharacterCasing="Upper"  PreviewKeyDown="TextBox_PreviewKeyDown" />
+                <TextBox Name="C3" Width="50" Height="50" Margin="4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="40" FontFamily="Franklin Gothic Medium" MaxLength="1"  CharacterCasing="Upper"  PreviewKeyDown="TextBox_PreviewKeyDown" />
+                <TextBox Name="C4" Width="50" Height="50" Margin="4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="40" FontFamily="Franklin Gothic Medium" MaxLength="1"  CharacterCasing="Upper"  PreviewKeyDown="TextBox_PreviewKeyDown" />
+                <TextBox Name="C5" Width="50" Height="50" Margin="4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="40" FontFamily="Franklin Gothic Medium" MaxLength="1"  CharacterCasing="Upper"  PreviewKeyDown="TextBox_PreviewKeyDown" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="4">
+                <TextBox Name="D1" Width="50" Height="50" Margin="4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="40" FontFamily="Franklin Gothic Medium" MaxLength="1"  CharacterCasing="Upper"  PreviewKeyDown="TextBox_PreviewKeyDown" />
+                <TextBox Name="D2" Width="50" Height="50" Margin="4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="40" FontFamily="Franklin Gothic Medium" MaxLength="1"  CharacterCasing="Upper"  PreviewKeyDown="TextBox_PreviewKeyDown" />
+                <TextBox Name="D3" Width="50" Height="50" Margin="4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="40" FontFamily="Franklin Gothic Medium" MaxLength="1"  CharacterCasing="Upper"  PreviewKeyDown="TextBox_PreviewKeyDown" />
+                <TextBox Name="D4" Width="50" Height="50" Margin="4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="40" FontFamily="Franklin Gothic Medium" MaxLength="1"  CharacterCasing="Upper"  PreviewKeyDown="TextBox_PreviewKeyDown" />
+                <TextBox Name="D5" Width="50" Height="50" Margin="4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="40" FontFamily="Franklin Gothic Medium" MaxLength="1"  CharacterCasing="Upper"  PreviewKeyDown="TextBox_PreviewKeyDown" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="4">
+                <TextBox Name="E1" Width="50" Height="50" Margin="4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="40" FontFamily="Franklin Gothic Medium" MaxLength="1"  CharacterCasing="Upper"  PreviewKeyDown="TextBox_PreviewKeyDown" />
+                <TextBox Name="E2" Width="50" Height="50" Margin="4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="40" FontFamily="Franklin Gothic Medium" MaxLength="1"  CharacterCasing="Upper"  PreviewKeyDown="TextBox_PreviewKeyDown" />
+                <TextBox Name="E3" Width="50" Height="50" Margin="4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="40" FontFamily="Franklin Gothic Medium" MaxLength="1"  CharacterCasing="Upper"  PreviewKeyDown="TextBox_PreviewKeyDown" />
+                <TextBox Name="E4" Width="50" Height="50" Margin="4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="40" FontFamily="Franklin Gothic Medium" MaxLength="1"  CharacterCasing="Upper"  PreviewKeyDown="TextBox_PreviewKeyDown" />
+                <TextBox Name="E5" Width="50" Height="50" Margin="4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="40" FontFamily="Franklin Gothic Medium" MaxLength="1"  CharacterCasing="Upper"  PreviewKeyDown="TextBox_PreviewKeyDown" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="4">
+                <TextBox Name="F1" Width="50" Height="50" Margin="4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="40" FontFamily="Franklin Gothic Medium" MaxLength="1"  CharacterCasing="Upper"  PreviewKeyDown="TextBox_PreviewKeyDown" />
+                <TextBox Name="F2" Width="50" Height="50" Margin="4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="40" FontFamily="Franklin Gothic Medium" MaxLength="1"  CharacterCasing="Upper"  PreviewKeyDown="TextBox_PreviewKeyDown" />
+                <TextBox Name="F3" Width="50" Height="50" Margin="4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="40" FontFamily="Franklin Gothic Medium" MaxLength="1"  CharacterCasing="Upper"  PreviewKeyDown="TextBox_PreviewKeyDown" />
+                <TextBox Name="F4" Width="50" Height="50" Margin="4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="40" FontFamily="Franklin Gothic Medium" MaxLength="1"  CharacterCasing="Upper"  PreviewKeyDown="TextBox_PreviewKeyDown" />
+                <TextBox Name="F5" Width="50" Height="50" Margin="4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="40" FontFamily="Franklin Gothic Medium" MaxLength="1"  CharacterCasing="Upper"  PreviewKeyDown="TextBox_PreviewKeyDown" />
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel Name ="Keyboard" HorizontalAlignment="Center" Grid.Row="1">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Name="Q" Content="Q" Background="#B7B7B7" Foreground="White" Width="40" Height="50" Margin="4,10,4,4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="30" FontFamily="Franklin Gothic Medium" Click="keyboard_Click"/>
+                <Button Name="W" Content="W" Background="#B7B7B7" Foreground="White" Width="40" Height="50" Margin="4,10,4,4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="30" FontFamily="Franklin Gothic Medium" Click="keyboard_Click" />
+                <Button Name="E" Content="E" Background="#B7B7B7" Foreground="White" Width="40" Height="50" Margin="4,10,4,4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="30" FontFamily="Franklin Gothic Medium" Click="keyboard_Click" />
+                <Button Name="R" Content="R" Background="#B7B7B7" Foreground="White" Width="40" Height="50" Margin="4,10,4,4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="30" FontFamily="Franklin Gothic Medium" Click="keyboard_Click" />
+                <Button Name="T" Content="T" Background="#B7B7B7" Foreground="White" Width="40" Height="50" Margin="4,10,4,4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="30" FontFamily="Franklin Gothic Medium" Click="keyboard_Click" />
+                <Button Name="Y" Content="Y" Background="#B7B7B7" Foreground="White" Width="40" Height="50" Margin="4,10,4,4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="30" FontFamily="Franklin Gothic Medium" Click="keyboard_Click" />
+                <Button Name="U" Content="U" Background="#B7B7B7" Foreground="White" Width="40" Height="50" Margin="4,10,4,4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="30" FontFamily="Franklin Gothic Medium" Click="keyboard_Click" />
+                <Button Name="I" Content="I" Background="#B7B7B7" Foreground="White" Width="40" Height="50" Margin="4,10,4,4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="30" FontFamily="Franklin Gothic Medium" Click="keyboard_Click" />
+                <Button Name="O" Content="O" Background="#B7B7B7" Foreground="White" Width="40" Height="50" Margin="4,10,4,4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="30" FontFamily="Franklin Gothic Medium" Click="keyboard_Click" />
+                <Button Name="P" Content="P" Background="#B7B7B7" Foreground="White" Width="40" Height="50" Margin="4,10,4,4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="30" FontFamily="Franklin Gothic Medium" Click="keyboard_Click" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Name="A" Content="A" Background="#B7B7B7" Foreground="White" Width="40" Height="50" Margin="4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="30" FontFamily="Franklin Gothic Medium" Click="keyboard_Click" />
+                <Button Name="S" Content="S" Background="#B7B7B7" Foreground="White" Width="40" Height="50" Margin="4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="30" FontFamily="Franklin Gothic Medium" Click="keyboard_Click" />
+                <Button Name="D" Content="D" Background="#B7B7B7" Foreground="White" Width="40" Height="50" Margin="4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="30" FontFamily="Franklin Gothic Medium" Click="keyboard_Click" />
+                <Button Name="F" Content="F" Background="#B7B7B7" Foreground="White" Width="40" Height="50" Margin="4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="30" FontFamily="Franklin Gothic Medium" Click="keyboard_Click" />
+                <Button Name="G" Content="G" Background="#B7B7B7" Foreground="White" Width="40" Height="50" Margin="4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="30" FontFamily="Franklin Gothic Medium" Click="keyboard_Click" />
+                <Button Name="H" Content="H" Background="#B7B7B7" Foreground="White" Width="40" Height="50" Margin="4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="30" FontFamily="Franklin Gothic Medium" Click="keyboard_Click" />
+                <Button Name="J" Content="J" Background="#B7B7B7" Foreground="White" Width="40" Height="50" Margin="4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="30" FontFamily="Franklin Gothic Medium" Click="keyboard_Click" />
+                <Button Name="K" Content="K" Background="#B7B7B7" Foreground="White" Width="40" Height="50" Margin="4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="30" FontFamily="Franklin Gothic Medium" Click="keyboard_Click" />
+                <Button Name="L" Content="L" Background="#B7B7B7" Foreground="White" Width="40" Height="50" Margin="4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="30" FontFamily="Franklin Gothic Medium" Click="keyboard_Click" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Name="enter" Content="ENTER" Background="#B7B7B7" Foreground="White" Width="60" Height="50" Margin="4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16" FontFamily="Franklin Gothic Medium" Click="enter_Click" />
+                <Button Name="Z" Content="Z" Background="#B7B7B7" Foreground="White" Width="40" Height="50" Margin="4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="30" FontFamily="Franklin Gothic Medium" Click="keyboard_Click" />
+                <Button Name="X" Content="X" Background="#B7B7B7" Foreground="White" Width="40" Height="50" Margin="4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="30" FontFamily="Franklin Gothic Medium" Click="keyboard_Click" />
+                <Button Name="C" Content="C" Background="#B7B7B7" Foreground="White" Width="40" Height="50" Margin="4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="30" FontFamily="Franklin Gothic Medium" Click="keyboard_Click" />
+                <Button Name="V" Content="V" Background="#B7B7B7" Foreground="White" Width="40" Height="50" Margin="4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="30" FontFamily="Franklin Gothic Medium" Click="keyboard_Click" />
+                <Button Name="B" Content="B" Background="#B7B7B7" Foreground="White" Width="40" Height="50" Margin="4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="30" FontFamily="Franklin Gothic Medium" Click="keyboard_Click" />
+                <Button Name="N" Content="N" Background="#B7B7B7" Foreground="White" Width="40" Height="50" Margin="4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="30" FontFamily="Franklin Gothic Medium" Click="keyboard_Click" />
+                <Button Name="M" Content="M" Background="#B7B7B7" Foreground="White" Width="40" Height="50" Margin="4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="30" FontFamily="Franklin Gothic Medium" Click="keyboard_Click" />
+                <Button Name="del" Content="DEL" Background="#B7B7B7" Foreground="White" Width="60" Height="50" Margin="4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16" FontFamily="Franklin Gothic Medium" Click="delete_Click" />
+            </StackPanel>
+        </StackPanel>
+        <TextBox Name="wordScreen" Background="#B7B7B7" Foreground="White" Width="500" Height="100" Margin="0,100,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="40" FontFamily="Franklin Gothic Medium" Text="Your word is: " Visibility="Visible" />
+        <Button Name="retry" Background="#B7B7B7" Foreground="White" Width="100" Height="50" Margin="0,250,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" FontFamily="Franklin Gothic Medium" Content="Retry" Visibility="Visible" Click="retry_Click"/>
+
+    </Grid>
+</Window>
