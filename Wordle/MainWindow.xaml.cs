@@ -12,9 +12,9 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
-using System.Windows.Shapes;
+//using System.Windows.Shapes;
 using System.Windows.Threading;
-using static System.Net.Mime.MediaTypeNames;
+//using static System.Net.Mime.MediaTypeNames;
 
 namespace Wordle
 {
@@ -65,14 +65,20 @@ namespace Wordle
 				}
 			}
 			A1.Focus();
-			using (StreamReader sr = new StreamReader("words.txt"))
+
+			string projectRootDirectory = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\"));
+			string imageDirectory = Path.Combine(projectRootDirectory, "textFiles");
+			string imagePath = Path.Combine(imageDirectory, "words.txt");
+			using (StreamReader sr = new StreamReader(imagePath))
 			{
 				while (sr.EndOfStream == false)
 				{
 					words.Add(sr.ReadLine());
 				}
 			}
-			using (StreamReader sr = new StreamReader("valids.txt"))
+
+			imagePath = Path.Combine(imageDirectory, "valids.txt");
+			using (StreamReader sr = new StreamReader(imagePath))
 			{
                 while (sr.EndOfStream== false)
                 {
